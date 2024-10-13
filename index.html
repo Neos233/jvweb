@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web JV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50; /* Color de fondo inicial */
+            margin: 0;
+            padding: 20px;
+            color: white; /* Color del texto por defecto */
+            transition: background 0.5s ease; /* Suave transición al cambiar el fondo */
+        }
+        header {
+            background: none; /* Sin color de fondo */
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Impact', sans-serif; /* Cambiar a fuente Impact */
+            font-size: 36px; /* Tamaño de fuente del título */
+            margin: 0; /* Sin margen */
+        }
+        main {
+            margin: 20px 0;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: rgba(76, 175, 80, 0.8);
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .button-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .button {
+            background-color: #6441a5; /* Color de Twitch */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            display: block;
+            width: 200px;
+            text-align: center;
+        }
+        .button.chatgpt {
+            background-color: #00aaff;
+        }
+        .button.google {
+            background-color: #34a853;
+        }
+        .button.youtube {
+            background-color: #FF0000;
+        }
+        .color-select {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Web JV</h1>
+    </header>
+    <main>
+        <h2>Sobre nosotros</h2>
+        <p>En Web JV, Busca rapido!</p>
+        
+        <div class="button-container">
+            <a href="https://www.twitch.tv/" class="button">Twitch</a>
+            <a href="https://chat.openai.com/" class="button chatgpt">ChatGPT</a>
+            <a href="https://www.google.com/" class="button google">Google</a>
+            <a href="https://www.youtube.com/" class="button youtube">YouTube</a>
+            
+            <label for="colorSelect" style="display: block; margin-top: 20px;">Selecciona un color de fondo:</label>
+            <select id="colorSelect" class="color-select" onchange="changeBackgroundColor()">
+                <option value="#2c3e50">Por defecto (Azul Oscuro)</option>
+                <option value="#e74c3c">Rojo</option>
+                <option value="#3498db">Azul</option>
+                <option value="#2ecc71">Verde</option>
+                <option value="#f1c40f">Amarillo</option>
+                <option value="#9b59b6">Púrpura</option>
+                <option value="#e67e22">Naranja</option>
+                <option value="#1abc9c">Turquesa</option>
+                <option value="#34495e">Gris Oscuro</option>
+                <option value="#95a5a6">Gris Claro</option>
+            </select>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Web JV</p>
+    </footer>
+
+    <script>
+        function changeBackgroundColor() {
+            var select = document.getElementById("colorSelect");
+            document.body.style.backgroundColor = select.value; // Cambia el color de fondo al seleccionado
+        }
+    </script>
+</body>
+</html>
+
